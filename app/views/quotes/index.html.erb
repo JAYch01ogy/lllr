@@ -1,0 +1,20 @@
+<% provide(:title, 'Quotes') %>
+<h1>Quotes</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= link_to "#{quote.first} #{quote.last}", quote %></td>
+        <td><%= quote.email %></td>
+        <td><%= quote.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
